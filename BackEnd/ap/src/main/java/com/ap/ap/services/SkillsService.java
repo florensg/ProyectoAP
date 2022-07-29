@@ -26,11 +26,11 @@ public class SkillsService {
         return skillsRepo.findAll();
     }
 
-    public Skills editarEducacion(Skills skill) {
+    public Skills editarSkills(Skills skill) {
         return skillsRepo.save(skill);
     }
 
-    public void borrarEducacion(Long id) {
+    public void borrarSkills(Long id) {
         skillsRepo.deleteById(id);
     }
 
