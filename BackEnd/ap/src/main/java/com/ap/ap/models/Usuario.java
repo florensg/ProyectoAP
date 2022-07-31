@@ -18,6 +18,8 @@ public class Usuario implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
     private String nombre;
+    private String user;
+    private String password;
     private String apellido;
     private String titulo;
     private String descripcion;
@@ -33,9 +35,11 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil) {
+    public Usuario(Long id, String nombre, String user, String password, String apellido, String titulo, String descripcion, String fotoPerfil) {
         this.id = id;
         this.nombre = nombre;
+        this.user = user;
+        this.password = password;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -56,6 +60,22 @@ public class Usuario implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getApellido() {
@@ -90,4 +110,7 @@ public class Usuario implements Serializable {
         this.fotoPerfil = fotoPerfil;
     }
 
+    
+
+    
 }

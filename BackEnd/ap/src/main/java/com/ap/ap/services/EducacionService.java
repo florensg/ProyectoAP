@@ -25,7 +25,7 @@ public class EducacionService {
     public List<Educacion> buscarEducaciones() {
         return educacionRepo.findAll();
     }
-    
+        
     public Educacion editarEducacion(Educacion educacion) {
         return educacionRepo.save(educacion);
     }
